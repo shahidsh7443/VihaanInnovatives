@@ -91,7 +91,7 @@ h2.section_title::after{ content:""; position:absolute; width:40px; height:2px; 
 -------------------------------------------------------------- */
 .social-icons a{ width:20px; height:40px; line-height:40px; text-align:center;  vertical-align:middle; display:inline-block; padding:0 8px 0; transition:0.6s; -moz-transition:0.6s; -webkit-transition:0.6s; -o-transition:0.6s; font-size:16px; color:#a3a9ab; }
 .social-icons br{ display:none;}
-.container{ width:1170px; margin:0 auto; position:relative;} 
+.container{ width:1170px; margin:0 auto; position:relative;}
 
 /*header menu css*/
 .toggle{display: block;}
@@ -115,7 +115,7 @@ h2.section_title::after{ content:""; position:absolute; width:40px; height:2px; 
 .sitenav ul li:hover > ul{display:block; width:200px; position:absolute; left:0; text-align:left; }
 .sitenav ul li:hover ul li ul{display:none; position:relative;}
 .sitenav ul li:hover ul li:hover > ul{display:block; position:absolute; left:200px; top:0;}
-/* = innerbanner css 
+/* = innerbanner css
 -------------------------------------------------------------- */
 .innerbanner{ text-align:center; }
 .innerbanner img{ position: relative; background-size:cover; width:100%; height:auto;}
@@ -164,7 +164,7 @@ a.buttonstyle1:hover{ background-color:#381305; color:#fff; }
 .promo-box{width:100%;height:auto; text-align:left;position:relative; font-size:17px;}
 .promo-box h3{ margin:0 0 15px 0; padding:0; font-size:32px;}
 .promo-left{float:left;width:75%}
- 
+
 .promo-right .morebutton{right:0; font-weight:bold;border-radius:25px;padding:10px 20px; position:absolute; top:50%; transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); -o-transform:translateY(-50%); -webkit-transform:translateY(-50%);}
  #promosection{ padding:40px 0 50px 0;}
 
@@ -175,7 +175,7 @@ a.buttonstyle1:hover{ background-color:#381305; color:#fff; }
 .counterlist{ width:20%; padding:30px 0; color:#c5c5c5; float:left; margin:0 27px; text-align:center;}
 .counterlist .fa{ font-size:40px; margin-top:20px;}
 .counterlist .counter{display:block; font-size:50px; color:#00aadd; line-height:80px; position:absolute; left:0; right:0; top:50%; transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); -o-transform:translateY(-50%); -webkit-transform:translateY(-50%);}
-.counter:after{ background:#000000; width:40px; height:2px; content:''; bottom:0; margin-top:20px; left:0; right:0; position:absolute; margin:0 auto;} 
+.counter:after{ background:#000000; width:40px; height:2px; content:''; bottom:0; margin-top:20px; left:0; right:0; position:absolute; margin:0 auto;}
 .counterlist .counter-cen{border:solid 5px #efc62c;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;width:195px;height:195px;position:relative;margin:0 auto;}
 .counterlist h6{ font-weight:bold; color:#c5c5c5; margin:30px 0 0 0; text-transform:uppercase;}
 
@@ -225,7 +225,7 @@ table{ width:100%}
 
 .panel {
 	margin: 0 auto;
-	height: 270px;  
+	height: 270px;
 	position: relative;
 	-webkit-perspective: 600px;
 	-moz-perspective: 600px;
@@ -235,7 +235,7 @@ table{ width:100%}
 .panel .back {
 	text-align: center;
 }
-	
+
 .panel .front {
 	height: inherit;
 	position: absolute;
@@ -440,7 +440,7 @@ ul.recent-post li a {text-decoration:none; padding:0; border:none; display:block
 ul.recent-post li a:hover { text-decoration:none;}
 ul.recent-post li:last-child { border-bottom:0; padding-bottom:0; margin-bottom:0;}
 
-.contactdetail{ line-height:22px; } 
+.contactdetail{ line-height:22px; }
 .contactdetail .fa{ margin-right:20px; font-size:16px;}
 .contactdetail p{ margin-bottom:10px;}
 
@@ -484,12 +484,12 @@ ul.recent-post li:last-child { border-bottom:0; padding-bottom:0; margin-bottom:
 .wpcf7 form input[type="url"], .wpcf7 form input[type="date"], .wpcf7 form select{ background-color:#f1f1f1; border:1px solid #eed2bb; padding:5px 3px; margin-top:10px; font:13px arial; color:#777777;}
 .wpcf7 form input[type="checkbox"], .wpcf7 form input[type="radio"], .wpcf7 form input[type="file"]{ margin-top:10px; padding:0;}
 span.wpcf7-list-item{ margin:0 15px 0 0 !important;}
-#contactform_main input[type=text], #contactform_main input[type=email], #contactform_main input[type=tel], #contactform_main input[type=url], #contactform_main textarea{width:40%; border:1px solid #E8E8E8; padding:15px; float:left; margin:0 8px 8px 0;}   
-#contactform_main textarea{ width:85.6%; margin-right:0; height:130px;} 
-#contactform_main span.capcode{ float:left; padding:13px; padding:13px; margin:0 8px 8px 0;}   
+#contactform_main input[type=text], #contactform_main input[type=email], #contactform_main input[type=tel], #contactform_main input[type=url], #contactform_main textarea{width:40%; border:1px solid #E8E8E8; padding:15px; float:left; margin:0 8px 8px 0;}
+#contactform_main textarea{ width:85.6%; margin-right:0; height:130px;}
+#contactform_main span.capcode{ float:left; padding:13px; padding:13px; margin:0 8px 8px 0;}
 #contactform_main input[type=submit], .wpcf7 form input[type="submit"] { font:400 20px/24px 'Roboto Condensed', sans-serif; text-transform:uppercase; cursor:pointer; border-radius:5px; }
 .wpcf7 form input[type="text"], .wpcf7 form input[type="email"], .wpcf7 form input[type="tel"], .wpcf7 form textarea{ padding:10px; margin:5px 8px 8px 0;  width:80% !important;  }
-.wpcf7 form textarea{ margin-right:0; height:130px; width:90% !important;} 
+.wpcf7 form textarea{ margin-right:0; height:130px; width:90% !important;}
 #portfoliosection .container{ width:100%; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
 
 
@@ -643,7 +643,7 @@ section#featureservices .container{ width:100%;}
 .whychooseus-title h6{margin-bottom:10px;margin-top:0}
 .whychooseus-description{display:block;line-height:22px; }
 .whychooseus-thumb{ width:45px; height:70px; overflow:hidden; margin-right:20px; float:left; vertical-align:bottom;display:block; position:relative;top:0;transition:all .5s ease-in-out 0}
-.whychooseus-thumb i{ font-size:35px;} 
+.whychooseus-thumb i{ font-size:35px;}
 .whychooseusbox:hover .whychooseus-title h6, .whychooseusbox:hover .whychooseus-description{ color:#ffffff; }
 
 #bytheme { padding:100px 0;  background-attachment:inherit !important}
@@ -672,3 +672,30 @@ section#featureservices .container{ width:100%;}
 
 .recentproject_list .item h3 { text-align:center; margin:15px 0 0 0; padding-bottom:10px; text-transform:uppercase;}
 .recentproject_list .item .pro-thumb img{min-height:230px;width:100%;}
+
+#Business .container label
+{
+  font-weight: 500;
+  font-size: 16px;
+}
+#Business .container p
+{
+  margin: 0;
+}
+#Business
+{
+  margin-top: -50px;
+  padding: 0;
+}
+#Business textarea{
+  width:100%;
+}
+.form-control
+{
+  font-size: 16px !important;
+  height:50px !important;
+}
+#Business .container .row .msg .form-control
+{
+  height:auto !important;
+}

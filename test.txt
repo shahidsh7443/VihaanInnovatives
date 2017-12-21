@@ -1,0 +1,178 @@
+<?php
+ //sending mail
+ if(isset($_POST['submit'])) {
+ $firstname = $POST_['fnm'];
+  $lastname = $POST_['lnm'];
+  $email = $_POST['email'];
+  $subject = "Application for Dealership recieved";
+  $body ="Thank you for applying to a dealership with VihaanInnovatives,Kindly wait for our response,we will reach you shortly";
+  // Always set content-type when sending HTML email
+  $headers = "MIME-Version: 1.0" . "\r\n";
+  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+  $headers .= 'From: shahidrazorbee@gmail.com' . "\r\n";
+  mail($email,$subject,$body,$headers);
+  $title=$POST_['title'];
+    $firstname = $POST_['fnm'];
+    $lastname = $POST_['lnm'];
+    $company=$POST_['cnm'];
+    $address=$POST_['caddress'];
+    $state=$POST_['state1'];
+    $city=$POST_['city1'];
+    $code=$POST_['zcode1'];
+    $email = $_POST['email'];
+    $mobile=$POST_['mob'];
+    $phone=$POST_['phone1'];
+    $nature=$POST_['nat'];
+    $brand=$POST_['products'];
+    $ownership=$POST_['$ownership'];
+     if($ownership== 'other')
+     {
+       $own=$POST_['ownership'];
+     }
+       else
+       {
+         $own=$POST_['other'];
+       }
+     $message=$POST_['message'];
+     $to="shahidrazorbee@gmail.com"
+    $subject = "Application for Dealership";
+  $body ="Thank you for applying to a dealership with VihaanInnovatives,Kindly wait for our response,we will reach you shortly";
+    // Always set content-type when sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= 'From:shahidsh7443@gmail.com'  ."\r\n";
+    mail($to,$subject,$body,$headers);
+    }
+?>
+
+
+
+///////////////////////////////////////////////////////
+
+<?php
+ //sending mail
+  $title=$POST_['title'];
+    $firstname = $POST_['fnm'];
+    $lastname = $POST_['lnm'];
+    $company=$POST_['cnm'];
+    $address=$POST_['caddress'];
+    $state=$POST_['state1'];
+    $city=$POST_['city1'];
+    $code=$POST_['zcode1'];
+    $mobile=$POST_['mob'];
+    $phone=$POST_['phone1'];
+    $email = $_POST['email'];
+    $nature=$POST_['nat'];
+    $brand=$POST_['products'];
+     if($ownership== 'other')
+     {
+       $own=$POST_['ownership'];
+     }
+       else
+       {
+         $own=$POST_['other'];
+       }
+     $message=$POST_['message'];
+    $subject = "Application for Dealership";
+    $body ='Name:' .$title.'.'.$firstname.''.$lastname. ','."\n".'Company Name:' .$company. ','."\n". 'Address:' .$address."," .$state. "," .$city. "-" .$code. ','."\n".
+    $body .='Mobile:' .$mobile. ','."\n". 'Phone:' .$phone. ','."\n". 'Nature of Business:' .$nature. ','."\n". 'Products Endorsed (Dealers/Distributors):' .$brand. ','."\n".
+    $body .='Ownership Structure:' .$own. ','."\n". 'Message:' .$message.;
+    // Always set content-type when sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= 'From:shahidrazorbee@gmail.com'. "\r\n";
+    mail($email,$subject,$body,$headers);
+    }
+?>
+
+
+//////////////////////////////////////////////
+
+<?php
+if(isset($_POST['submit'])) {
+  $title =$_POST['title'];
+    $firstname = $_POST['fnm'];
+    $lastname = $_POST['lnm'];
+    $company = $_POST['cnm'];
+    $address = $_POST['caddress'];
+    $state = $_POST['state1'];
+    $city = $_POST['city1'];
+    $code = $_POST['zcode1'];
+    $mobile = $_POST['mob'];
+    $phone = $_POST['phone1'];
+    $email = $_POST['email'];
+    $nature = $_POST['nat'];
+    $brand = $_POST['products'];
+    $ownership = $_POST['ownership'];
+     if($ownership == 'other')
+     {
+       $own = $_POST['ownership'];
+     }
+       else
+       {
+         $own = $_POST['other'];
+       }
+     $message=$_POST['message'];
+    $subject = "Application for Dealership";
+    $body = "Name:" .$firstname. "<br/> welcome to Vihaaninnovative";
+    // Always set content-type when sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= 'From: shahidrazorbee@gmail.com' . "\r\n";
+    if(mail($email,$subject,$body,$headers))
+    {
+     $firstname = $_POST['fnm'];
+    echo $body;
+    }
+    else
+    {
+      echo "<script type='text/javascript'>alert('Unable to submit');</script>";
+    }
+    }
+?>
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+<?php
+if(isset($_POST['submit'])) {
+  $title =$_POST['title'];
+    $firstname = $_POST['fnm'];
+    $lastname = $_POST['lnm'];
+    $company = $_POST['cnm'];
+    $address = $_POST['caddress'];
+    $state = $_POST['state1'];
+    $city = $_POST['city1'];
+    $code = $_POST['zcode1'];
+    $mobile = $_POST['mob'];
+    $phone = $_POST['phone1'];
+    $email = $_POST['email'];
+    $nature = $_POST['nat'];
+    $brand = $_POST['products'];
+    $ownership = $_POST['ownership'];
+     if($ownership == 'other')
+     {
+       $own = $_POST['ownership'];
+     }
+       else
+       {
+         $own = $_POST['other'];
+       }
+     $message=$_POST['message'];
+    $subject = "Application for Dealership";
+    $body = "Name:" .$title."." .$firstname."".$lastname. "<br/>Company Name:" .$company. "<br/>Address:" .$address."," .$state. "," .$city. "-" .$code. "<br/>Mobile:" .$mobile. "<br/>Phone:" .$phone. "<br/>Nature of Business:" .$nature. "<br/>Products Endorsed (Dealers/Distributors):" .$brand. "<br/>Ownership Structure:" .$own. "<br/>Message:" .$message. "<br/>Thank you";
+    // Always set content-type when sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= 'From: shahidrazorbee@gmail.com' . "\r\n";
+    if(mail($email,$subject,$body,$headers))
+    {
+     $firstname = $_POST['fnm'];
+    echo $body;
+    }
+    else
+    {
+      echo "<script type='text/javascript'>alert('Unable to submit');</script>";
+    }
+    }
+?>
+
+C:\xampp\htdocs\razorbee\nagaraj\wp-content\themes\razorbee
