@@ -10,9 +10,11 @@
  * @package BuildUp Pro
  */
 
-get_header(); 
+get_header();
 ?>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <?php if ( 'page' == get_option( 'show_on_front' ) && ( '' != get_option( 'page_for_posts' ) ) && $wp_query->get_queried_object_id() == get_option( 'page_for_posts' ) ) : ?>
 
     <div class="container content-area">
@@ -28,15 +30,15 @@ get_header();
                          * (where ___ is the post format) and that will be used instead.
                          */
                         get_template_part( 'content', get_post_format() );
-                
+
                     endwhile;
                     // Previous/next post navigation.
                     buildup_pro_pagination();
-                
+
                 else :
                     // If no content, include the "No posts found" template.
                      get_template_part( 'no-results', 'index' );
-                
+
                 endif;
                 ?>
             </div>
@@ -47,13 +49,13 @@ get_header();
 <?php else: ?>
 
 <?php
-    if( of_get_option('numsection', true) > 0 ) { 
+    if( of_get_option('numsection', true) > 0 ) {
         $numSections = esc_attr( of_get_option('numsection', true) );
-        for( $s=1; $s<=$numSections; $s++ ){ 
+        for( $s=1; $s<=$numSections; $s++ ){
             $title 			= ( of_get_option('sectiontitle'.$s, true) != '' ) ? esc_html( of_get_option('sectiontitle'.$s, true) ) : '';
 			$secid			= ( of_get_option('menutitle'.$s, true) != '') ? esc_html( of_get_option('menutitle'.$s, true) ) : '';
             $class			= ( of_get_option('sectionclass'.$s, true) != '' ) ? esc_html( of_get_option('sectionclass'.$s, true) ) : '';
-            $content		= ( of_get_option('sectioncontent'.$s, true) != '' ) ? of_get_option('sectioncontent'.$s, true) : ''; 
+            $content		= ( of_get_option('sectioncontent'.$s, true) != '' ) ? of_get_option('sectioncontent'.$s, true) : '';
 			$hide			= ( of_get_option('hidesec'.$s, true) != '' ) ? of_get_option('hidesec'.$s, true) : '';
             $bgcolor		= ( of_get_option('sectionbgcolor'.$s, true) != '' ) ? of_get_option('sectionbgcolor'.$s, true) : '';
             $bgimage		= ( of_get_option('sectionbgimage'.$s, true) != '' ) ? of_get_option('sectionbgimage'.$s, true) : '';
@@ -65,12 +67,12 @@ get_header();
                         <h2 class="section_title"><?php echo $title; ?></h2>
                     <?php } ?>
                     <?php the_content_format( $content ); ?>
-                     </div><!-- .end section class -->  
-                     <div class="clear"></div>                 
+                     </div><!-- .end section class -->
+                     <div class="clear"></div>
                  </div><!-- container -->
             </section>
-        
-            <?php 
+
+            <?php
         }
     }
     ?>

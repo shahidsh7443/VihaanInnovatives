@@ -1,5 +1,5 @@
 jQuery(document).ready( function(){
-	var ww = jQuery(window).width();	
+	var ww = jQuery(window).width();
 	jQuery("area[rel^='prettyPhoto']").prettyPhoto();
 	jQuery(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000, autoplay_slideshow: false});
 	jQuery(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
@@ -22,7 +22,7 @@ jQuery(document).ready( function(){
         }
         return false; // Prevent the browser jump to the link anchor
     });
-	
+
 	// Tabs
 	jQuery('ul.tabs > br').remove();
 	jQuery('.tabs-wrapper').append(jQuery('.tabs li div'));
@@ -52,7 +52,7 @@ jQuery(document).ready( function(){
 
 });
 
-jQuery(window).load(function() { 
+jQuery(window).load(function() {
    jQuery('#testimonials .quotes').quovolver({
       children    : 'div',
       transitionSpeed : 600,
@@ -65,18 +65,18 @@ jQuery(window).load(function() {
       navNum      : true,
       navText     : false,
       navTextContent  : 'Quote @a of @b'
-    });    
+    });
   });
 
 // NAVIGATION CALLBACK
 var ww = jQuery(window).width();
-jQuery(document).ready(function() { 
+jQuery(document).ready(function() {
 	jQuery(".sitenav li a").each(function() {
 		if (jQuery(this).next().length > 0) {
 			jQuery(this).addClass("parent");
 		};
 	})
-	jQuery(".toggleMenu").click(function(e) { 
+	jQuery(".toggleMenu").click(function(e) {
 		e.preventDefault();
 		jQuery(this).toggleClass("active");
 		jQuery(".sitenav").slideToggle('fast');
@@ -115,7 +115,7 @@ jQuery(document).ready(function() {
   	jQuery('.srchicon').click(function() {
 			jQuery('.searchtop').toggle();
 			jQuery('.topsocial').toggle();
-		});	
+		});
 });
 
 // skill bar script
@@ -129,7 +129,7 @@ jQuery(document).ready(function() {
 
 jQuery(document).ready(function(){
 	// hide #back-top first
-	jQuery("#back-top").hide();	
+	jQuery("#back-top").hide();
 	// fade in #back-top
 	jQuery(function () {
 		jQuery(window).scroll(function () {
@@ -150,30 +150,30 @@ jQuery(document).ready(function(){
 
 });
 
-//Client Logo jquery   
-jQuery(window).load(function() { 
+//Client Logo jquery
+jQuery(window).load(function() {
     jQuery("#flexiselDemo3").flexisel({
         visibleItems: 5,
         animationSpeed: 1000,
         autoPlay: true,
-        autoPlaySpeed: 3000,            
+        autoPlaySpeed: 3000,
         pauseOnHover: true,
         enableResponsiveBreakpoints: true,
-        responsiveBreakpoints: { 
-            portrait: { 
+        responsiveBreakpoints: {
+            portrait: {
                 changePoint:480,
                 visibleItems: 1
-            }, 
-            landscape: { 
+            },
+            landscape: {
                 changePoint:640,
                 visibleItems: 2
             },
-            tablet: { 
+            tablet: {
                 changePoint:768,
                 visibleItems: 3
             }
         }
-    });    
+    });
 });
 
 // Flip Box Function
@@ -189,30 +189,30 @@ jQuery(document).ready(function(){
 });
 
 
-//Client Logo jquery   
-jQuery(window).load(function() { 
+//Client Logo jquery
+jQuery(window).load(function() {
     jQuery("#SidebarRoator").flexisel({
         visibleItems: 1,
         animationSpeed: 1000,
         autoPlay: true,
-        autoPlaySpeed: 3000,            
+        autoPlaySpeed: 3000,
         pauseOnHover: true,
         enableResponsiveBreakpoints: true,
-        responsiveBreakpoints: { 
-            portrait: { 
+        responsiveBreakpoints: {
+            portrait: {
                 changePoint:480,
                 visibleItems: 1
-            }, 
-            landscape: { 
+            },
+            landscape: {
                 changePoint:640,
                 visibleItems: 1
             },
-            tablet: { 
+            tablet: {
                 changePoint:768,
                 visibleItems: 1
             }
         }
-    });    
+    });
 });
 
 jQuery(document).ready(function() {

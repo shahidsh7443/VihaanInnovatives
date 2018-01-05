@@ -15,7 +15,7 @@ array_pop($content);
 $content = implode(" ",$content).'...';
 } else {
 $content = implode(" ",$content);
-}	
+}
 $content = preg_replace('/\[.+\]/','', $content);
 $content = apply_filters('the_content', $content);
 $content = str_replace(']]>', ']]&gt;', $content);
@@ -46,7 +46,7 @@ function buildup_pro_setup() {
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'title-tag' );
 	add_filter('widget_text', 'do_shortcode');
-	add_image_size('homepage-thumb',240,145,true);	
+	add_image_size('homepage-thumb',240,145,true);
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'buildup-pro' ),
 		'footer' => __( 'Footer Menu', 'buildup-pro' ),
@@ -68,7 +68,7 @@ function buildup_pro_widgets_init() {
 		'name'          => __( 'Blog Sidebar', 'buildup-pro' ),
 		'description'   => __( 'Appears on blog page sidebar', 'buildup-pro' ),
 		'id'            => 'sidebar-1',
-		'before_widget' => '',		
+		'before_widget' => '',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3><aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '<div class="clear"></div></aside>',
@@ -78,12 +78,12 @@ function buildup_pro_widgets_init() {
 		'name'          => __( 'Sidebar Main', 'buildup-pro' ),
 		'description'   => __( 'Appears on page sidebar', 'buildup-pro' ),
 		'id'            => 'sidebar-main',
-		'before_widget' => '',		
+		'before_widget' => '',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3><aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-	) );	
-	
+	) );
+
 	register_sidebar( array(
 		'name'          => __( 'Footer Widget 1', 'buildup-pro' ),
 		'description'   => __( 'Appears on footer', 'buildup-pro' ),
@@ -93,7 +93,7 @@ function buildup_pro_widgets_init() {
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => __( 'Footer Widget 2', 'buildup-pro' ),
 		'description'   => __( 'Appears on footer', 'buildup-pro' ),
@@ -103,7 +103,7 @@ function buildup_pro_widgets_init() {
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => __( 'Footer Widget 3', 'buildup-pro' ),
 		'description'   => __( 'Appears on footer', 'buildup-pro' ),
@@ -113,7 +113,7 @@ function buildup_pro_widgets_init() {
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => __( 'Footer Widget 4', 'buildup-pro' ),
 		'description'   => __( 'Appears on footer', 'buildup-pro' ),
@@ -123,8 +123,8 @@ function buildup_pro_widgets_init() {
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
 	) );
-	
-	
+
+
 	register_sidebar( array(
 		'name'          => __( 'Sidebar Contact Page', 'buildup-pro' ),
 		'description'   => __( 'Appears on contact page', 'buildup-pro' ),
@@ -141,8 +141,8 @@ add_action( 'widgets_init', 'buildup_pro_widgets_init' );
 define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/' );
 require_once get_template_directory() . '/inc/options-framework.php';
 
-function buildup_pro_scripts() {	
-	wp_enqueue_style( 'buildup-pro-gfonts-lato', '//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' );	
+function buildup_pro_scripts() {
+	wp_enqueue_style( 'buildup-pro-gfonts-lato', '//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' );
 
 	if( of_get_option('bodyfontface',true) != '' ){
 		wp_enqueue_style( 'buildup-pro-gfonts-body', '//fonts.googleapis.com/css?family='.rawurlencode(of_get_option('bodyfontface',true)) .'&subset=cyrillic,arabic,bengali,cyrillic,cyrillic-ext,devanagari,greek,greek-ext,gujarati,hebrew,latin-ext,tamil,telugu,thai,vietnamese,latin' );
@@ -155,40 +155,40 @@ function buildup_pro_scripts() {
 	}
 	if ( of_get_option('headfontface', true) != '' ) {
 		wp_enqueue_style( 'buildup-pro-gfonts-heading', '//fonts.googleapis.com/css?family='.rawurlencode(of_get_option('headfontface',true)) .'&subset=cyrillic,arabic,bengali,cyrillic,cyrillic-ext,devanagari,greek,greek-ext,gujarati,hebrew,latin-ext,tamil,telugu,thai,vietnamese,latin');
-	} 	
+	}
 	if ( of_get_option('sectiontitlefontface', true) != '' ) {
 		wp_enqueue_style( 'buildup-pro-gfonts-sectiontitle', '//fonts.googleapis.com/css?family='.rawurlencode(of_get_option('sectiontitlefontface',true)) .'&subset=cyrillic,arabic,bengali,cyrillic,cyrillic-ext,devanagari,greek,greek-ext,gujarati,hebrew,latin-ext,tamil,telugu,thai,vietnamese,latin');
-	} 
+	}
 	if ( of_get_option('slidetitlefontface', true) != '' ) {
 		wp_enqueue_style( 'buildup-pro-gfonts-slidetitle', '//fonts.googleapis.com/css?family='.rawurlencode(of_get_option('slidetitlefontface',true)) .'&subset=cyrillic,arabic,bengali,cyrillic,cyrillic-ext,devanagari,greek,greek-ext,gujarati,hebrew,latin-ext,tamil,telugu,thai,vietnamese,latin');
-	} 
+	}
 	if ( of_get_option('slidedesfontface', true) != '' ) {
 		wp_enqueue_style( 'buildup-pro-gfonts-slidedes', '//fonts.googleapis.com/css?family='.rawurlencode(of_get_option('slidedesfontface',true)) .'&subset=cyrillic,arabic,bengali,cyrillic,cyrillic-ext,devanagari,greek,greek-ext,gujarati,hebrew,latin-ext,tamil,telugu,thai,vietnamese,latin');
-	}  		
+	}
 
 	wp_enqueue_style( 'buildup-pro-basic-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'buildup-pro-editor-style', get_template_directory_uri().'/editor-style.css' );
-	wp_enqueue_style( 'buildup-pro-base-style', get_template_directory_uri().'/css/default.css' );	
-	if ( is_home() || is_front_page() ) { 
+	wp_enqueue_style( 'buildup-pro-base-style', get_template_directory_uri().'/css/default.css' );
+	if ( is_home() || is_front_page() ) {
 	wp_enqueue_style( 'buildup-pro-nivo-style', get_template_directory_uri().'/css/nivo-slider.css' );
 	wp_enqueue_script( 'buildup-pro-nivo-slider', get_template_directory_uri() . '/js/jquery.nivo.slider.js', array('jquery') );
-	}	
+	}
 
-	wp_enqueue_script( 'buildup-pro-customscripts', get_template_directory_uri() . '/js/custom.js', array('jquery') );	
+	wp_enqueue_script( 'buildup-pro-customscripts', get_template_directory_uri() . '/js/custom.js', array('jquery') );
 	wp_enqueue_style( 'buildup-pro-font-awesome-style', get_template_directory_uri().'/css/font-awesome.css' );	
 	wp_enqueue_style( 'buildup-pro-animation', get_template_directory_uri().'/css/animation.css' );
 	wp_enqueue_style( 'buildup-pro-hover', get_template_directory_uri().'/css/hover.css' );
 	wp_enqueue_style( 'buildup-pro-hover-min', get_template_directory_uri().'/css/hover-min.css' );
 	wp_enqueue_script( 'buildup-pro-testimonialsminjs', get_template_directory_uri().'/testimonialsrotator/js/jquery.quovolver.min.js', array('jquery') );
-	wp_enqueue_style( 'buildup-pro-testimonialslider-style', get_template_directory_uri().'/testimonialsrotator/js/tm-rotator.css' );	
-	wp_enqueue_style( 'buildup-pro-responsive-style', get_template_directory_uri().'/css/responsive.css' );		
+	wp_enqueue_style( 'buildup-pro-testimonialslider-style', get_template_directory_uri().'/testimonialsrotator/js/tm-rotator.css' );
+	wp_enqueue_style( 'buildup-pro-responsive-style', get_template_directory_uri().'/css/responsive.css' );
 	wp_enqueue_style( 'buildup-pro-owl-style', get_template_directory_uri().'/testimonialsrotator/js/owl.carousel.css' );
 	wp_enqueue_script( 'buildup-pro-owljs', get_template_directory_uri().'/testimonialsrotator/js/owl.carousel.js', array('jquery') );
-	
+
 	wp_enqueue_script( 'buildup-pro-counterup', get_template_directory_uri().'/counter/js/jquery.counterup.min.js', array('jquery') );
 	wp_enqueue_script( 'buildup-pro-waypoints', get_template_directory_uri().'/counter/js/waypoints.min.js', array('jquery') );
-	
-	
+
+
 	// mixitup script
 	wp_enqueue_style( 'buildup-pro-mixitup-style', get_template_directory_uri().'/mixitup/style-mixitup.css' );
 	wp_enqueue_script( 'buildup-pro-jquery_013-script', get_template_directory_uri() . '/mixitup/jquery_013.js', array('jquery') );
@@ -197,16 +197,16 @@ function buildup_pro_scripts() {
 	// prettyPhoto script
 	wp_enqueue_style( 'buildup-pro-prettyphoto-style', get_template_directory_uri().'/mixitup/prettyPhotoe735.css' );
 	wp_enqueue_script( 'buildup-pro-prettyphoto-script', get_template_directory_uri() . '/mixitup/jquery.prettyPhoto5152.js', array('jquery') );
-	
+
 	//Client Logo Rotator
-	wp_enqueue_style( 'buildup-pro-flexiselcss', get_template_directory_uri().'/css/flexiselcss.css' );	
+	wp_enqueue_style( 'buildup-pro-flexiselcss', get_template_directory_uri().'/css/flexiselcss.css' );
 	wp_enqueue_script( 'buildup-pro-flexisel', get_template_directory_uri() . '/js/jquery.flexisel.js', array('jquery') );
-	
+
 	if( of_get_option('scrollanimation',true) != true) {
 		wp_enqueue_style( 'buildup-pro-animation-style', get_template_directory_uri().'/css/animation-style.css' );
-		wp_enqueue_script( 'buildup-pro-custom-animation', get_template_directory_uri() . '/js/custom-animation.js', array('jquery') );	
+		wp_enqueue_script( 'buildup-pro-custom-animation', get_template_directory_uri() . '/js/custom-animation.js', array('jquery') );
 	}
-	
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -214,9 +214,9 @@ function buildup_pro_scripts() {
 add_action( 'wp_enqueue_scripts', 'buildup_pro_scripts' );
 
 function media_css_hook(){
-	
+
 	?>
-    	
+
     	<script>
 		jQuery(window).bind('scroll', function() {
 	var wwd = jQuery(window).width();
@@ -230,10 +230,10 @@ function media_css_hook(){
 		}
 		<?php } ?>
 	}
-});		
+});
 
-<?php if ( is_home() || is_front_page() ) { ?> 
-					
+<?php if ( is_home() || is_front_page() ) { ?>
+
 		jQuery(window).load(function() {
         jQuery('#slider').nivoSlider({
         	effect:'<?php echo of_get_option('slideefect',true); ?>', //sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft, fold, fade, random, slideInRight, slideInLeft, boxRandom, boxRain, boxRainReverse, boxRainGrow, boxRainGrowReverse
@@ -248,9 +248,9 @@ function media_css_hook(){
 <?php } ?>
 
 
-jQuery(window).load(function() {   
+jQuery(window).load(function() {
   jQuery('.owl-carousel').owlCarousel({
-    loop:true,	
+    loop:true,
 	autoplay:<?php echo of_get_option('testimonialsautoplay',true); ?>,
 	autoplayTimeout: <?php echo of_get_option('testimonialsrotatingspeed',true); ?>,
     margin:20,
@@ -271,9 +271,9 @@ jQuery(window).load(function() {
 })
   });
 
-jQuery(window).load(function() {   
+jQuery(window).load(function() {
   jQuery('.recentproject_list').owlCarousel({
-    loop:true,	
+    loop:true,
 	autoplay:<?php echo of_get_option('testimonialsautoplay',true); ?>,
 	autoplayTimeout: <?php echo of_get_option('testimonialsrotatingspeed',true); ?>,
     margin:0,
@@ -304,21 +304,21 @@ jQuery(document).ready(function() {
       $this.css('background','#7fc242').addClass('clicked');
     }
   });
- 
+
 });
 		</script>
-<?php 
+<?php
 }
-add_action('wp_head','media_css_hook'); 
+add_action('wp_head','media_css_hook');
 
 
-function buildup_pro_custom_head_codes() { 
+function buildup_pro_custom_head_codes() {
 	if ( function_exists('of_get_option') ){
 		if ( of_get_option('style2', true) != '' ) {
 			echo "<style>". esc_html( of_get_option('style2', true) ) ."</style>
 			";
 		}
-		echo "<style>";		
+		echo "<style>";
 		if ( of_get_option('bodyfontcolor', true) != '' ) {
 			echo 'body, .contact-form-section .address,  .accordion-box .acc-content{color:'. esc_html( of_get_option('bodyfontcolor', true) ) .';}';
 		}
@@ -333,7 +333,7 @@ function buildup_pro_custom_head_codes() {
 		}
 		if( of_get_option('logoheight',true) != '' ){
 			echo ".logo img{height:".of_get_option('logoheight',true)."px;}";
-		}				
+		}
 		if ( of_get_option('navdpbgcolor', true) != '' ) {
 			echo ".sitenav ul li:hover > ul{background-color:".of_get_option('navdpbgcolor', true).";}";
 		}
@@ -342,26 +342,26 @@ function buildup_pro_custom_head_codes() {
 		}
 		if ( of_get_option('navfontface', true) != '' || of_get_option('navfontsize',true) != '' ) {
 			echo '.sitenav ul{font-family:\''. esc_html( of_get_option('navfontface', true) ) .'\', sans-serif;font-size:'.of_get_option('navfontsize',true).'}';
-		}		
+		}
 		if ( of_get_option('navfontcolor', true) != '' ) {
 			echo '.sitenav ul li a, .sitenav ul li.current_page_item ul.sub-menu li a, .sitenav ul li.current-menu-parent ul.sub-menu li a{color:'. esc_html( of_get_option('navfontcolor', true) ) .';}';
-		}		
+		}
 		if( of_get_option('sectiontitlefontface',true) != '' || of_get_option('sectitlesize',true) != '' || of_get_option('sectitlecolor',true) != '' ){
 			echo "h2.section_title{ font-family:".of_get_option('sectiontitlefontface',true)."; font-size:".of_get_option('sectitlesize',true)."; color:".of_get_option('sectitlecolor',true)."; }";
 		}
 		if( of_get_option('sectitleunderlinecolor',true) != '' ){
 			echo "h2.section_title::after{ background-color:".of_get_option('sectitleunderlinecolor',true)."; }";
-		}	
-		
+		}
+
 		if( of_get_option('allimagesborder',true) != '' ){
 			echo ".recentproject_list .item:hover .pro-thumb::after, .team_column:hover .ourteam-thumb::after{ border-color:".of_get_option('allimagesborder',true)."; }";
-		}	
-		
-		
-		
+		}
+
+
+
 		if ( of_get_option('linkhovercolor', true) != '' ) {
 			echo 'a:hover, .slide_toggle a:hover{color:'. esc_html( of_get_option('linkhovercolor', true) ) .';}';
-		}			
+		}
 		if( of_get_option('foottitlecolor', true) != '' || of_get_option('ftfontsize', true) != '' || of_get_option('footertitleborder', true) != '' ){
 			echo ".footer h5{color:".of_get_option('foottitlecolor', true)."; font-size:".of_get_option('ftfontsize', true).";  border-color:".of_get_option('footertitleborder', true)."; }";
 		}
@@ -370,17 +370,17 @@ function buildup_pro_custom_head_codes() {
 		}
 		if( of_get_option('designcolor', true) != ''){
 			echo ".design-by{color:".of_get_option('designcolor',true)."}";
-		}		
+		}
 		if ( of_get_option('headertopbgcolor', true) != '' || of_get_option('headertopfontcolor', true) != '' ) {
 			echo ".header-top{background-color:".of_get_option('headertopbgcolor',true)."; color:".of_get_option('headertopfontcolor',true).";}";
 		}
-		
-		
-		$headerhex = of_get_option('headerbgcolor',true); 
+
+
+		$headerhex = of_get_option('headerbgcolor',true);
 		list($r,$g,$b) = sscanf($headerhex,'#%02x%02x%02x');
 		if ( of_get_option('colorscheme', true) != '' ) {
 			echo ".header{background-color:rgba(".$r.",".$g.",".$b.",".of_get_option('headeropacity',true).");}";
-		}		
+		}
 		if( of_get_option('fontawesomeiconcolor',true) != '' ){
 			echo ".themefeatures .one_third .fa{ color:".of_get_option('fontawesomeiconcolor',true).";}";
 		}
@@ -389,13 +389,13 @@ function buildup_pro_custom_head_codes() {
 		}
 		if( of_get_option('socialfontcolor',true) != '' ){
 			echo ".header-top .social-icons a{ color:".of_get_option('socialfontcolor',true).";}";
-		}			
+		}
 		if( of_get_option('btntxtcolor', true) != ''){
 			echo ".button, #commentform input#submit, input.search-submit, .post-password-form input[type=submit], p.read-more a, .pagination ul li span, .pagination ul li a, .headertop .right a, .wpcf7 form input[type='submit'], #sidebar .search-form input.search-submit{color:". of_get_option('btntxtcolor', true) ."; }";
 		}
 		if( of_get_option('btnbghvcolor',true) != '' || of_get_option('btntxthvcolor', true) != '' ){
 			echo ".button:hover, #commentform input#submit:hover, input.search-submit:hover, .post-password-form input[type=submit]:hover, p.read-more a:hover, .pagination ul li .current, .pagination ul li a:hover,.headertop .right a:hover, .wpcf7 form input[type='submit']:hover{background-color:".of_get_option('btnbghvcolor',true)."; color:". esc_html( of_get_option('btntxthvcolor', true) ) .";}";
-		}		
+		}
 		if( of_get_option('btnbgcolor',true) != '' || of_get_option('btntxtcolor', true) != ''){
 			echo "a.morebutton{background-color:".of_get_option('btnbgcolor',true)."; color:". of_get_option('btntxtcolor', true) ."; }";
 		}
@@ -410,27 +410,27 @@ function buildup_pro_custom_head_codes() {
 		}
 		if ( of_get_option('widgetboxbgcolor', true) != '' || of_get_option('widgetboxfontcolor', true) != '' ) {
 		echo "aside.widget, #sidebar .search-form input.search-field{ background-color:".of_get_option('widgetboxbgcolor', true)."; color:".of_get_option('widgetboxfontcolor', true).";  }";
-		}			
+		}
 		if ( of_get_option('footerbgcolor', true) != '' || of_get_option('footdesccolor', true) != '' ) {
 		echo "#footer-wrapper{background-color:".of_get_option('footerbgcolor', true)."; color:".of_get_option('footdesccolor', true).";}";
-		}	
-		
+		}
+
 		if ( of_get_option('footerbgimage', true) != '') {
 		echo "#footer-wrapper{background: url(".of_get_option('footerbgimage', true).") no-repeat;}";
-		}		
-		
+		}
+
 		if ( of_get_option('footdesccolor', true) != '' ) {
 			echo ".contactdetail a{color:".of_get_option('footdesccolor', true)."; }";
 		}
-		
-		$copyhex = of_get_option('copybgcolor',true); 
+
+		$copyhex = of_get_option('copybgcolor',true);
 		list($r,$g,$b) = sscanf($copyhex,'#%02x%02x%02x');
 		if ( of_get_option('copybgcolor', true) != '' ) {
 			echo ".copyright-wrapper{background-color:rgba(".$r.",".$g.",".$b.",".of_get_option('copybgopacity',true).");}";
 		}
-		
-		
-		
+
+
+
 		if( of_get_option('sldpagebg',true) != ''){
 			echo ".nivo-controlNav a{background-color:".of_get_option('sldpagebg',true)."}";
 		}
@@ -439,10 +439,10 @@ function buildup_pro_custom_head_codes() {
 		}
 		if( of_get_option('sidebarliaborder', true) != '' ){
 			echo "#sidebar ul li{border-color:".of_get_option('sidebarliaborder',true)."}";
-		}	
+		}
 		if( of_get_option('sidebarfontcolor',true) != '' ){
 			echo "#sidebar ul li a{color:".of_get_option('sidebarfontcolor',true)."; }";
-		}		
+		}
 		if ( of_get_option('slidetitlefontface', true) != '' || of_get_option('slidetitlecolor', true) != '' || of_get_option('slidetitlefontsize', true) != '') {
 		echo ".nivo-caption h2{ font-family:".of_get_option('slidetitlefontface', true)."; color:".of_get_option('slidetitlecolor', true)."; font-size:".of_get_option('slidetitlefontsize', true).";}";
 		}
@@ -451,39 +451,39 @@ function buildup_pro_custom_head_codes() {
 		}
 		if ( of_get_option('copylinkshover', true) != '' ) {
 		echo ".copyright-wrapper a:hover{ color: ".of_get_option('copylinkshover', true)."; }";
-		}	
+		}
 /* Heading */
 		if( of_get_option('headfontface', true) != '' ){
 			echo "h1,h2,h3,h4,h5,h6{ font-family:".of_get_option('headfontface',true)."; }";
-		}		
+		}
 		if ( of_get_option('h1fontsize', true) != '' || of_get_option('h1fontcolor', true) != '' ) {
 			echo "h1{ font-size:".of_get_option('h1fontsize', true)."; color:".of_get_option('h1fontcolor', true).";}";
 		}
 		if ( of_get_option('h2fontsize', true) != '' || of_get_option('h2fontcolor', true) != '' ) {
 			echo "h2{ font-size:".of_get_option('h2fontsize', true)."; color:".of_get_option('h2fontcolor', true).";}";
-		}		
+		}
 		if ( of_get_option('h3fontsize', true) != '' || of_get_option('h3fontcolor', true) != '' ) {
 			echo "h3{ font-size:".of_get_option('h3fontsize', true)."; color:".of_get_option('h3fontcolor', true).";}";
-		}		
+		}
 		if ( of_get_option('h4fontsize', true) != '' || of_get_option('h4fontcolor', true) != '' ) {
 			echo "h4{ font-size:".of_get_option('h4fontsize', true)."; color:".of_get_option('h4fontcolor', true).";}";
-		}		
+		}
 		if ( of_get_option('h5fontsize', true) != '' || of_get_option('h5fontcolor', true) != '' ) {
 			echo "h5{font-size:".of_get_option('h5fontsize', true)."; color:".of_get_option('h5fontcolor', true).";}";
-		}		
+		}
 		if ( of_get_option('h6fontsize', true) != '' || of_get_option('h6fontcolor', true) != '' ) {
 			echo "h6{ font-size:".of_get_option('h6fontsize', true)."; color:".of_get_option('h6fontcolor', true).";}";
 		}
 /* Custom editable */
 		if ( of_get_option('footsocialcolor', true) != '' ) {
 			echo ".footer .social-icons a{ color:".of_get_option('footsocialcolor', true)."; border-color:".of_get_option('footsocialcolor', true).";}";
-		}		
-		$sliderarrowhex = of_get_option('sldarrowbg',true); 
+		}
+		$sliderarrowhex = of_get_option('sldarrowbg',true);
 		list($r,$g,$b) = sscanf($sliderarrowhex,'#%02x%02x%02x');
 		if ( of_get_option('sldarrowbg', true) != '' ) {
 			echo ".nivo-directionNav a{background-color:rgba(".$r.",".$g.",".$b.",".of_get_option('sldarrowopacity',true).");}";
 		}
-		$slidercaphex = of_get_option('slidercapbg',true); 
+		$slidercaphex = of_get_option('slidercapbg',true);
 		list($r,$g,$b) = sscanf($slidercaphex,'#%02x%02x%02x');
 		if ( of_get_option('slidercapbg', true) != '' ) {
 			echo ".nivo-caption{background-color:rgba(".$r.",".$g.",".$b.",".of_get_option('slidercapbgpacity',true).");}";
@@ -503,9 +503,9 @@ function buildup_pro_custom_head_codes() {
 			echo ".news:after{ border-right-color:".of_get_option('newsbxbgcolor', true)."; }";
 			echo ".rightside .news:after{ border-left-color:".of_get_option('newsbxbgcolor', true)."; }";
 		}
-		
-		
-		// Top Four Boxes CSS 
+
+
+		// Top Four Boxes CSS
 		if ( of_get_option('fourbxbgcolor', true) != '' || of_get_option('hometopfourbxcolor', true) != '' ) {
 			echo ".fourbox{ background-color:".of_get_option('fourbxbgcolor', true)."; color:".of_get_option('hometopfourbxcolor', true)."; }";
 		}
@@ -519,22 +519,22 @@ function buildup_pro_custom_head_codes() {
 		}
 		if ( of_get_option('hometopfourbxreadmorehv', true) != '' || of_get_option('hometopfourbxtitlecolorhv', true) != '' ) {
 			echo ".fourbox:hover .pagemore{ background-color:".of_get_option('hometopfourbxtitlecolorhv', true)."; color:".of_get_option('hometopfourbxreadmorehv', true)."; }";
-		}		
+		}
 		//Team Member CSS
 		if ( of_get_option('teambxfontcolor', true) != '' || of_get_option('teamsocialcolor', true) != '' || of_get_option('teamsocialiconbg', true) != '' || of_get_option('ourteambgcolor', true) != '' ) {
 			echo ".team_column, .teammember-content h5{color:".of_get_option('teambxfontcolor', true).";}";
 			echo ".teammember-content a{color:".of_get_option('teambxfontcolor', true).";}";
 			echo ".member-social-icon a{color:".of_get_option('teamsocialcolor', true)." !important; background-color:".of_get_option('teamsocialiconbg', true)." !important;}";
 			echo ".team_column{background:".of_get_option('ourteambgcolor', true).";}";
-			
-		}		
-		
+
+		}
+
 		if ( of_get_option('teamdesignationcolor', true) != '' ) {
 			echo ".team_column:hover .teammember-content span, .team_column:hover .teammember-content h5, .team_column:hover p{color:".of_get_option('teamdesignationcolor', true).";}";
 		}
-		
+
 		//Testimonials CSS
-		
+
 		if ( of_get_option('testidotsbgcolor', true) != '' ) {
 			echo ".owl-controls .owl-dot{ background-color:".of_get_option('testidotsbgcolor', true)."; }";
 		}
@@ -556,7 +556,7 @@ function buildup_pro_custom_head_codes() {
 		}
 		if ( of_get_option('countertitlecolor', true) != '' ) {
 			echo ".counterlist h6{ color:".of_get_option('countertitlecolor', true)."; }";
-		}		
+		}
 		if ( of_get_option('counterdesccolor', true) != '' ) {
 			echo ".counterlist .counter{ color:".of_get_option('counterdesccolor', true)."; }";
 			echo ".counter::after{ background-color:".of_get_option('counterdesccolor', true)."; }";
@@ -569,15 +569,15 @@ function buildup_pro_custom_head_codes() {
 		//Color scheme for one click background color
 		if ( of_get_option('colorscheme', true) != '' ) {
 			echo ".themefeatures .one_third:hover,
-			.button, 
-			#commentform input#submit, 
-			input.search-submit, 
-			.post-password-form input[type='submit'], 
-			p.read-more a, 
-			.pagination ul li span, 
-			.pagination ul li a, 
-			.headertop .right a, 
-			.wpcf7 form input[type='submit'], 
+			.button,
+			#commentform input#submit,
+			input.search-submit,
+			.post-password-form input[type='submit'],
+			p.read-more a,
+			.pagination ul li span,
+			.pagination ul li a,
+			.headertop .right a,
+			.wpcf7 form input[type='submit'],
 			#sidebar .search-form input.search-submit,
 			.nivo-controlNav a.active,
 			.fourbox:hover .pagemore,
@@ -586,29 +586,29 @@ function buildup_pro_custom_head_codes() {
 			.offer-1-column .offimgbx,
 			.hvr-rectangle-out::before,
 			.vacation-wrap,
-			.home-post-comment, 
-			.toggle a, 
-			.holderwrap, 
-			.owl-controls .owl-dot.active, 
-			h3.widget-title, 
-			.box2, 
-			.button, 
-			#commentform input#submit, 
-			input.search-submit, 
-			.post-password-form input[type=submit], 
-			p.read-more a, 
-			.pagination ul li span, 
-			.pagination ul li a, 
-			.headertop .right a, 
-			.wpcf7 form input[type='submit'], 
-			#sidebar .search-form input.search-submit, 
-			.team_column:hover, 
-			.nivo-controlNav a.active, 
+			.home-post-comment,
+			.toggle a,
+			.holderwrap,
+			.owl-controls .owl-dot.active,
+			h3.widget-title,
+			.box2,
+			.button,
+			#commentform input#submit,
+			input.search-submit,
+			.post-password-form input[type=submit],
+			p.read-more a,
+			.pagination ul li span,
+			.pagination ul li a,
+			.headertop .right a,
+			.wpcf7 form input[type='submit'],
+			#sidebar .search-form input.search-submit,
+			.team_column:hover,
+			.nivo-controlNav a.active,
 			h1.entry-title:after, a.morebutton, .whychooseusbox:hover, #bytheme h2.section_title:after, .owl-carousel .owl-item{ background-color:".of_get_option('colorscheme', true)."; }";
 		}
-		
-		
-		$sliderarrowhex = of_get_option('colorscheme',true); 
+
+
+		$sliderarrowhex = of_get_option('colorscheme',true);
 		list($r,$g,$b) = sscanf($sliderarrowhex,'#%02x%02x%02x');
 		if ( of_get_option('colorscheme', true) != '' ) {
 			echo ".themefeatures .one_half:hover{background-color:rgba(".$r.",".$g.",".$b.",".of_get_option('sldarrowopacity',true).");}";
@@ -616,29 +616,29 @@ function buildup_pro_custom_head_codes() {
 
 		//Color scheme for one click font color
 		if ( of_get_option('colorscheme', true) != '' ) {
-			echo ".sitenav ul li a:hover, 
-			.sitenav ul li.current_page_item a, 
-			.sitenav ul li.current_page_item ul li a:hover, 
+			echo ".sitenav ul li a:hover,
+			.sitenav ul li.current_page_item a,
+			.sitenav ul li.current_page_item ul li a:hover,
 			.sitenav ul li:hover,
 			.header-top .social-icons a:hover, .social-icons a:hover, .cntbutton,
 			.offcontnt .pricedv,
 			.fourbox:hover h6,
-			.vacation-wrap a.bookatour, h2.section_title span, 
-			.sitenav ul li a:hover, 
-			.sitenav ul li.current_page_item a, 
+			.vacation-wrap a.bookatour, h2.section_title span,
+			.sitenav ul li a:hover,
+			.sitenav ul li.current_page_item a,
 			.sitenav ul li.current_page_item ul li a:hover,
-			.sitenav ul li.current-menu-parent a, 
+			.sitenav ul li.current-menu-parent a,
 			.sitenav ul li:hover,
-			.sitenav ul li.current_page_item ul.sub-menu li a:hover, 
+			.sitenav ul li.current_page_item ul.sub-menu li a:hover,
 			.sitenav ul li.current-menu-parent ul.sub-menu li a:hover,
 			.sitenav ul li.current-menu-parent ul.sub-menu li.current_page_item a,
 			.sitenav ul li:hover,
-			.contactdetail a:hover, .footer h5 span, .footer ul li a:hover, .footer ul li.current_page_item a, div.recent-post a:hover, a, .slide_toggle a, #sidebar ul li a:hover, .copyright-wrapper a, .footer .social-icons a:hover, .counterlist,  .themefeatures .one_half .fa,.member-social-icon a:hover, 
-			ul.portfoliofilter li:hover a, 
-			ul.portfoliofilter li a.selected{ color:".of_get_option('colorscheme', true)."; }";			
+			.contactdetail a:hover, .footer h5 span, .footer ul li a:hover, .footer ul li.current_page_item a, div.recent-post a:hover, a, .slide_toggle a, #sidebar ul li a:hover, .copyright-wrapper a, .footer .social-icons a:hover, .counterlist,  .themefeatures .one_half .fa,.member-social-icon a:hover,
+			ul.portfoliofilter li:hover a,
+			ul.portfoliofilter li a.selected{ color:".of_get_option('colorscheme', true)."; }";
 		}
-		
-		
+
+
 		//Color scheme for one click border color
 		if ( of_get_option('colorscheme', true) != '' ) {
 			echo ".team_column:hover .teamrectangle{ border-bottom-color:".of_get_option('colorscheme', true)." ; }";
@@ -647,7 +647,7 @@ function buildup_pro_custom_head_codes() {
 			echo ".news-box.rightside:hover .news::after{ border-right:none !important; }";
 			echo ".news-box:hover .news::after{ border-right-color:".of_get_option('colorscheme', true)." ; }";
 		}
-		
+
 		echo "</style>";
 	}
 }
@@ -718,7 +718,7 @@ function buildup_pro_custom_blogpost_pagination( $wp_query ){
 		'prev_text'		=> '&laquo; Prev',
 		'next_text' 	=> 'Next &raquo;',
 		'type'  => 'array'
-	) ); 
+	) );
 	if( is_array($pagin) ) {
 		$paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
 		echo '<div class="pagination"><div><ul>';
@@ -727,11 +727,11 @@ function buildup_pro_custom_blogpost_pagination( $wp_query ){
 			echo "<li>$page</li>";
 		}
 		echo '</ul></div></div>';
-	} 
+	}
 }
 // get slug by id
 function buildup_pro_get_slug_by_id($id) {
 	$post_data = get_post($id, ARRAY_A);
 	$slug = $post_data['post_name'];
-	return $slug; 
+	return $slug;
 }
