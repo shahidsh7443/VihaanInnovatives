@@ -741,6 +741,32 @@ section#featureservices .container{ width:100%;}
   {
     min-height: 145px;
   }
+  .slider-main
+  {
+    height: 250px !important;
+  }
+  #slider
+  {
+    height: 250px;
+  }
+  .nivoSlider img
+  {
+    height: 250px;
+    opacity: 1 !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+  .nivo-caption
+{
+  background: rgba(0, 0, 0, 0.7) !important;
+  margin-top: 100px !important;
+  width: 100% !important;
+  left: 0% !important;
+}
+.nivo-caption h2
+{
+  color: white !important;
+}
 }
 @media only screen and (min-width:481px) and (max-width:768px)
 {
