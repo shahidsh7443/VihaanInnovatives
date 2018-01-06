@@ -9,6 +9,10 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+
+<script>
+var eval = function(a){ console.log(a)};
+</script>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
 <meta name="viewport" content="width=device-width">
@@ -37,7 +41,7 @@
   <div class="container">
    <?php if(!dynamic_sidebar('header-widget')): ?>
      <div class="left"><?php if( of_get_option('headerinfo',true) != ''){ ?><?php echo of_get_option('headerinfo'); ?><?php } ?></div>
-     <div class="right"><?php if( of_get_option('headersocial') != '' ){ echo do_shortcode( of_get_option('headersocial', true ));} ?></div>
+     <div class="right"><?php if( of_get_option('headersocial') != '' ){ echo do_shortcode( of_get_option('headersocial', true ));}  ?></div>
      <div class="clear"></div>
     <?php endif; ?>
   </div>

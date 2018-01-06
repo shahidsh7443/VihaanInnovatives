@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!--[if lt IE 9]>
@@ -98,7 +97,7 @@ if(isset($_POST['submit'])) {
 $success=mail($to,$subject,$body,$headers);
 if( $success== true ) {
 		echo "<script type='text/javascript'>alert('Thank you for applying for Dealership with VihaanInnovatives,we will reach you shortly.');</script>";
-  
+
 }else {
 		echo "<script type='text/javascript'>alert('Unable to send mail');</script>";
 		}

@@ -5,6 +5,7 @@
  * @package BuildUp Pro
  */
 ?>
+<!--
 <div id="sidebar" <?php if( is_page_template('blog-post-left-sidebar.php')){?> style="float:left;"<?php } ?>>
     
     <?php if ( ! dynamic_sidebar( 'sidebar-main' ) ) : ?>
@@ -23,4 +24,4 @@
         </aside>    
     <?php endif; // end sidebar widget area ?>
 	
-</div><!-- sidebar -->
+</div>--><!-- sidebar -->

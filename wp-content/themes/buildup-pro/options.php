@@ -2343,7 +2343,7 @@ function optionsframework_options() {
 	$options[] = array(
 		'desc' => __('Select background Image for footer', 'buildup-pro'),
 		'id' => 'footerbgimage',
-		'std' => get_template_directory_uri().'/images/footer-bg.jpg',
+		'std' => get_template_directory_uri().'/images/slider3.jpg',
 		'type' => 'upload');		 
 
 	$options[] = array(

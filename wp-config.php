@@ -78,6 +78,8 @@ $table_prefix  = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
+define('WP_HOME','http://localhost/razorbee/vihaaninnovative/');
+define('WP_SITEURL','http://localhost/razorbee/vihaaninnovative/');
 
 /* That's all, stop editing! Happy blogging. */
 

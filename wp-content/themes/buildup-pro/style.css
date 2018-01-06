@@ -169,6 +169,7 @@ a.buttonstyle1:hover{ background-color:#381305; color:#fff; }
  #promosection{ padding:40px 0 50px 0;}
 
 
+
 /* = counter section css
 -------------------------------------------------------------- */
 .counterlist{ width:20%; padding:30px 0; color:#c5c5c5; float:left; margin:0 27px; text-align:center;}
@@ -491,15 +492,8 @@ span.wpcf7-list-item{ margin:0 15px 0 0 !important;}
 .wpcf7 form textarea{ margin-right:0; height:130px; width:90% !important;}
 #portfoliosection .container{ width:100%; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
 
-#ivd .ivideo .linne
-{
-  margin-bottom: 40px;
-  border:3px double #00b8bb;
-}
-#ivd .ivideo h3
-{
-  margin-top:0px;
-}
+
+
 iframe{ width:100%;}
 .contact_left{ float:left; width:65%; }
 .contact_right{ float:right; width:30%;}
@@ -642,7 +636,7 @@ section#featureservices .container{ width:100%;}
 /*------------------------- Why Choose Us BOX ------------------------*/
 .whychooseusbox{float:left;width:31.27%;background-color:#fff;border:1px solid;border-color:#efeeee; margin:0 10px 20px; position:relative;}
 .whychooseusbox:hover{border-color:#ffffff; background:#fbc412;  }
-.whychooseusborder{border-left:4px solid; border-color:#fbc412; padding:28px;min-height:145px;-webkit-transition:border 400ms ease-in;-moz-transition:border 400ms ease-in;-o-transition:border 400ms ease-in;transition:border 400ms ease-in}
+.whychooseusborder{border-left:4px solid; border-color:#fbc412; padding:28px;height:auto;min-height:75px;-webkit-transition:border 400ms ease-in;-moz-transition:border 400ms ease-in;-o-transition:border 400ms ease-in;transition:border 400ms ease-in}
 .whychooseusborder:hover{border-left:4px solid; border-color:transparent!important; }
 .whychooseustitledes{display:table;}
 .whychooseus-title{display:block}
@@ -704,4 +698,60 @@ section#featureservices .container{ width:100%;}
 #Business .container .row .msg .form-control
 {
   height:auto !important;
+}
+.inst
+{
+  color: #964f27;
+}
+.linne
+{
+  border: 4px double #00b8bb;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.whychooseusborder
+{
+  min-height: 150px;
+}
+
+.vc3 .olli
+{
+  margin-top: 10px;
+}
+.vc3
+{
+  padding: 0 10px 0 30px !important;
+    text-align: justify !important;
+    line-height: 25px !important;
+    margin-top: 30px !important;
+}
+.vc4 p
+{
+  line-height: 30px;
+    text-align: justify;
+}
+.ivideo .section_title
+{
+  margin-bottom: 10px;
+}
+@media only screen and (max-width:480px)
+{
+  .whychooseusborder
+  {
+    min-height: 145px;
+  }
+}
+@media only screen and (min-width:481px) and (max-width:768px)
+{
+  .whychooseusborder
+  {
+    min-height: 260px;
+  }
+}
+@media only screen and (min-width:769px) and (max-width:1024px)
+{
+  .whychooseusborder
+  {
+    min-height: 175px;
+  }
 }

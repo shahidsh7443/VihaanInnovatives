@@ -3,7 +3,7 @@
 /*-----------------------------------------------------------------------------------*/
 
 Theme Name      :   BuildUp PRO
-Theme URI       :   http://gracethemes.com/themes/construction-renovation-company-wordpress-theme/
+Theme URI       :   https://gracethemes.com/themes/photography-wordpress-theme/
 Version         :   Pro 1.0
 Tested up to    :   WP 4.7.3
 Author          :   Grace Themes

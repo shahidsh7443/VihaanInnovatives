@@ -55,9 +55,6 @@ function buildup_pro_setup() {
 		'default-color' => 'ffffff'
 	) );
 	add_editor_style( 'editor-style.css' );
-	add_theme_support( 'wc-product-gallery-zoom' );
-	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-slider' );
 }
 endif; // buildup_pro_setup
 add_action( 'after_setup_theme', 'buildup_pro_setup' );
@@ -156,15 +153,6 @@ function buildup_pro_scripts() {
 	if ( of_get_option('headfontface', true) != '' ) {
 		wp_enqueue_style( 'buildup-pro-gfonts-heading', '//fonts.googleapis.com/css?family='.rawurlencode(of_get_option('headfontface',true)) .'&subset=cyrillic,arabic,bengali,cyrillic,cyrillic-ext,devanagari,greek,greek-ext,gujarati,hebrew,latin-ext,tamil,telugu,thai,vietnamese,latin');
 	}
-	if ( of_get_option('sectiontitlefontface', true) != '' ) {
-		wp_enqueue_style( 'buildup-pro-gfonts-sectiontitle', '//fonts.googleapis.com/css?family='.rawurlencode(of_get_option('sectiontitlefontface',true)) .'&subset=cyrillic,arabic,bengali,cyrillic,cyrillic-ext,devanagari,greek,greek-ext,gujarati,hebrew,latin-ext,tamil,telugu,thai,vietnamese,latin');
-	}
-	if ( of_get_option('slidetitlefontface', true) != '' ) {
-		wp_enqueue_style( 'buildup-pro-gfonts-slidetitle', '//fonts.googleapis.com/css?family='.rawurlencode(of_get_option('slidetitlefontface',true)) .'&subset=cyrillic,arabic,bengali,cyrillic,cyrillic-ext,devanagari,greek,greek-ext,gujarati,hebrew,latin-ext,tamil,telugu,thai,vietnamese,latin');
-	}
-	if ( of_get_option('slidedesfontface', true) != '' ) {
-		wp_enqueue_style( 'buildup-pro-gfonts-slidedes', '//fonts.googleapis.com/css?family='.rawurlencode(of_get_option('slidedesfontface',true)) .'&subset=cyrillic,arabic,bengali,cyrillic,cyrillic-ext,devanagari,greek,greek-ext,gujarati,hebrew,latin-ext,tamil,telugu,thai,vietnamese,latin');
-	}
 
 	wp_enqueue_style( 'buildup-pro-basic-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'buildup-pro-editor-style', get_template_directory_uri().'/editor-style.css' );
@@ -175,7 +163,7 @@ function buildup_pro_scripts() {
 	}
 
 	wp_enqueue_script( 'buildup-pro-customscripts', get_template_directory_uri() . '/js/custom.js', array('jquery') );
-	wp_enqueue_style( 'buildup-pro-font-awesome-style', get_template_directory_uri().'/css/font-awesome.css' );	
+	wp_enqueue_style( 'buildup-pro-font-awesome-style', get_template_directory_uri().'/css/font-awesome.css' );
 	wp_enqueue_style( 'buildup-pro-animation', get_template_directory_uri().'/css/animation.css' );
 	wp_enqueue_style( 'buildup-pro-hover', get_template_directory_uri().'/css/hover.css' );
 	wp_enqueue_style( 'buildup-pro-hover-min', get_template_directory_uri().'/css/hover-min.css' );
@@ -197,6 +185,9 @@ function buildup_pro_scripts() {
 	// prettyPhoto script
 	wp_enqueue_style( 'buildup-pro-prettyphoto-style', get_template_directory_uri().'/mixitup/prettyPhotoe735.css' );
 	wp_enqueue_script( 'buildup-pro-prettyphoto-script', get_template_directory_uri() . '/mixitup/jquery.prettyPhoto5152.js', array('jquery') );
+
+
+wp_enqueue_script( 'buildup-pro-customscripts', get_template_directory_uri() . '/js/custom.js', array('jquery') );
 
 	//Client Logo Rotator
 	wp_enqueue_style( 'buildup-pro-flexiselcss', get_template_directory_uri().'/css/flexiselcss.css' );
@@ -232,8 +223,6 @@ function media_css_hook(){
 	}
 });
 
-<?php if ( is_home() || is_front_page() ) { ?>
-
 		jQuery(window).load(function() {
         jQuery('#slider').nivoSlider({
         	effect:'<?php echo of_get_option('slideefect',true); ?>', //sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft, fold, fade, random, slideInRight, slideInLeft, boxRandom, boxRain, boxRainReverse, boxRainGrow, boxRainGrowReverse
@@ -244,8 +233,6 @@ function media_css_hook(){
 			pauseOnHover: <?php echo of_get_option('slidepausehover',true); ?>,
     });
 });
-
-<?php } ?>
 
 
 jQuery(window).load(function() {
@@ -344,7 +331,7 @@ function buildup_pro_custom_head_codes() {
 			echo '.sitenav ul{font-family:\''. esc_html( of_get_option('navfontface', true) ) .'\', sans-serif;font-size:'.of_get_option('navfontsize',true).'}';
 		}
 		if ( of_get_option('navfontcolor', true) != '' ) {
-			echo '.sitenav ul li a, .sitenav ul li.current_page_item ul.sub-menu li a, .sitenav ul li.current-menu-parent ul.sub-menu li a{color:'. esc_html( of_get_option('navfontcolor', true) ) .';}';
+			echo '.sitenav ul li a{color:'. esc_html( of_get_option('navfontcolor', true) ) .';}';
 		}
 		if( of_get_option('sectiontitlefontface',true) != '' || of_get_option('sectitlesize',true) != '' || of_get_option('sectitlecolor',true) != '' ){
 			echo "h2.section_title{ font-family:".of_get_option('sectiontitlefontface',true)."; font-size:".of_get_option('sectitlesize',true)."; color:".of_get_option('sectitlecolor',true)."; }";
@@ -623,17 +610,7 @@ function buildup_pro_custom_head_codes() {
 			.header-top .social-icons a:hover, .social-icons a:hover, .cntbutton,
 			.offcontnt .pricedv,
 			.fourbox:hover h6,
-			.vacation-wrap a.bookatour, h2.section_title span,
-			.sitenav ul li a:hover,
-			.sitenav ul li.current_page_item a,
-			.sitenav ul li.current_page_item ul li a:hover,
-			.sitenav ul li.current-menu-parent a,
-			.sitenav ul li:hover,
-			.sitenav ul li.current_page_item ul.sub-menu li a:hover,
-			.sitenav ul li.current-menu-parent ul.sub-menu li a:hover,
-			.sitenav ul li.current-menu-parent ul.sub-menu li.current_page_item a,
-			.sitenav ul li:hover,
-			.contactdetail a:hover, .footer h5 span, .footer ul li a:hover, .footer ul li.current_page_item a, div.recent-post a:hover, a, .slide_toggle a, #sidebar ul li a:hover, .copyright-wrapper a, .footer .social-icons a:hover, .counterlist,  .themefeatures .one_half .fa,.member-social-icon a:hover,
+			.vacation-wrap a.bookatour, h2.section_title span, .sitenav ul li a:hover, .sitenav ul li.current_page_item a, .sitenav ul li.current_page_item ul li a:hover, .sitenav ul li:hover, .contactdetail a:hover, .footer h5 span, .footer ul li a:hover, .footer ul li.current_page_item a, div.recent-post a:hover, a, .slide_toggle a, #sidebar ul li a:hover, .copyright-wrapper a, .footer .social-icons a:hover, .counterlist, .sitenav ul li a:hover, .sitenav ul li.current_page_item a, .sitenav ul li.current-menu-parent a.parent, .themefeatures .one_half .fa,.member-social-icon a:hover,
 			ul.portfoliofilter li:hover a,
 			ul.portfoliofilter li a.selected{ color:".of_get_option('colorscheme', true)."; }";
 		}

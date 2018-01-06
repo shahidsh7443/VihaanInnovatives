@@ -17,8 +17,9 @@
                 <div class="one_half last_column">
                     <h2 class="section_title"><?php the_title(); ?></h2>
                     <h5><?php echo of_get_option('whosubtitle'); ?></h5> 
-                    <p><?php echo wp_trim_words( get_the_content(), of_get_option('welcomepagelength'), '' ); ?></p>
+                    <?php echo content( of_get_option('welcomepagelength') ); ?>    
                     <div class="custombtn"><a class="morebutton" href="<?php the_permalink(); ?>"><?php echo of_get_option('whowearereadmore'); ?></a></div>     
+					<?php // the_content();?>
                 </div>
                 <div class="clear"></div>               
              <?php endwhile; wp_reset_postdata(); ?>
@@ -96,7 +97,7 @@
                 <?php } ?>
                 <div class="pagecontent">
                  <a href="<?php the_permalink(); ?>"><h6><?php the_title(); ?></h6></a>
-                  <p><?php echo wp_trim_words( get_the_content(), of_get_option('pageboxlength'), '' ); ?></p>               
+                  <?php echo content( of_get_option('pageboxlength') ); ?>                                    
 				  <?php if( of_get_option('readmorebutton',true) != '') { ?>
                    <a class="pagemore" href="<?php the_permalink(); ?>"><?php echo of_get_option('readmorebutton'); ?></a>      
 				  <?php } ?>

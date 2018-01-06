@@ -1,0 +1,8 @@
+[01-Oct-2017 04:28:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/revatraders135/public_html/wp-content/themes/buildup-pro/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/revatraders135/public_html/wp-content/themes/buildup-pro/index.php on line 13
+[01-Oct-2017 04:28:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/revatraders135/public_html/wp-content/themes/buildup-pro/index.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/revatraders135/public_html/wp-content/themes/buildup-pro/index.php on line 13

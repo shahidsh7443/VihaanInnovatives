@@ -26,7 +26,7 @@
         <?php if ( is_search() || !is_single() ) : // Only display Excerpts for Search ?>
             <div class="entry-summary">
                 <?php echo content( of_get_option('blogpostexcerptlength') ); ?>                  
-                <p class="read-more"><a href="<?php the_permalink(); ?>"><?php echo of_get_option('readmoretext'); ?></a></p>
+                <p class="read-more"><a href="<?php the_permalink(); ?>"><?php echo of_get_option('blogpostreadmoretext'); ?></a></p>
             </div><!-- .entry-summary -->
         <?php else : ?>
             <div class="entry-content">
