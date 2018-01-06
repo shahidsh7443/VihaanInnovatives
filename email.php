@@ -17,28 +17,46 @@ $(function(){
 </script>
 <![endif]-->
 <style>
-	#error
-	{
-	margin-left: 100px;
-	position: relative;
-	top:30px;
-	color:blue;
-	font-weight: bold;
-	}
+#emailct
+{
+  background-color: white !important;
+    text-align: center;
+    margin: 200px auto;
+    margin-bottom: 30px;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: -20px 19px 20px 0px black;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    color: #000;
+    width: 35%;
+}
+.cet h1{
+  color: #022ba1;
+}
+@media only screen and (max-width:480px)
+{
+  body{
+    background-size: inherit !important;
+  }
+  .cet
+  {
+    width: 85% !important;
+  }
+}
 </style>
 </head>
 
-<body style="background-image: url(bcg1.jpg)">
+<body style="background-image: url(bcg1.jpg);background-size:cover;">
+  <div class="container cet" id="emailct">
     <div class="row-fluid">
-    	<div class="span12"><div id="dashed"></div></div>
-    </div>
-    <div class="row-fluid">
-    	<div class="span6 offset3"><h2 id="construction">Thank you for Reaching us.</h2></div>
+    	<div class="span6 offset3"><h1 id="construction">Thank you for Reaching us.</h1></div>
     </div>
     <div class="row-fluid">
     	<div class="span4 offset4" id="panel">
             <div id="white">
-            	<p> Thank you for reaching us.<br /><br />We have recieved your email, our support will reach you shortly.<br /><br /><a href="/arrisventures/contact.php"><< Back</a></p>
+              <br>
+            	<p>We have recieved your email, our support will reach you shortly.<br /><br /><a href="/vihaaninnovative/index.php/business/"><< Back</a></p>
                 <!-- under construction hat -->
             <!--<img id="hat" src="img/thankyou.png" class="hidden-phone"/>-->
             </div>
@@ -59,11 +77,11 @@ if(isset($_POST['submit'])) {
   $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
   $headers .= 'From: shahidrazorbee@gmail.com' . "\r\n";
   $success=mail($email,$subject,$body,$headers);
-  if( $success== true ) {
+  /*if( $success== true ) {
 		echo "<script type='text/javascript'>alert('Thank you for applying for Dealership with VihaanInnovatives,we will reach you shortly.');</script>";
 		}else {
 		echo "<script type='text/javascript'>alert('Unable to send mail');</script>";
-  }
+  }*/
   $title =$_POST['title'];
     $firstname = $_POST['fnm'];
     $lastname = $_POST['lnm'];
